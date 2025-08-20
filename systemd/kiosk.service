@@ -1,0 +1,14 @@
+[Unit]
+Description=Kiosk Mode
+After=graphical.target
+
+[Service]
+User=ryuichi
+Environment=XAUTHORITY=/home/ryuichi/.Xauthority
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:8080
+Restart=always
+
+[Install]
+WantedBy=graphical.target
+
