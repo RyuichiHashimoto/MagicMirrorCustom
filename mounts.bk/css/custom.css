@@ -1,0 +1,6 @@
+/* override css here */
+.module.weather .wi-strong-wind,
+.module.weather .wi-strong-wind ~ * {
+  display: none !important;
+}
+
