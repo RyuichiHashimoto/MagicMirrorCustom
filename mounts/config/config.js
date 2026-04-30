@@ -12,30 +12,19 @@ const modules = [
 	{
 		module: "alert",
 	},
-	// {
-	// 	module: "newsfeed",
-	// 	position: "top_left",
-	// 	config: {
-	// 		feeds: [
-	// 			{ title: "NHK 主要ニュース", url: "https://www3.nhk.or.jp/rss/news/cat0.xml" },
-	// 			{ title: "Yahoo!ニュース 主要", url: "https://news.yahoo.co.jp/rss/topics/top-picks.xml" }
-	// 		],
-	// 		showSourceTitle: true,
-	// 		showPublishDate: true,
-	// 		broadcastNewsFeeds: true,
-	// 		broadcastNewsUpdates: true
-	// 	}
-	// },
 	{
 		module: "MMM-RssRotator",
 		position: "top_left",
 		config: {
 			feeds: [
-				{ title: "NHK NEWS", url: "https://www3.nhk.or.jp/rss/news/cat0.xml" },
-				{ title: "Yahoo!ニュース", url: "https://news.yahoo.co.jp/rss/topics/top-picks.xml" }
+				{ title: "NHK NEWS", url: "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml" },
+				{ title: "ITメディア", url: "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml" },
+				{ title: "Impress Watch", url: "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf" },
+				{ title: "JVN", url: "https://jvn.jp/rss/jvn.rdf" },
+				{ title: "TechCrunch AI", url: "https://techcrunch.com/category/artificial-intelligence/feed/" }
 			],
 			fetchInterval: 5 * 60 * 1000,
-			rotateInterval: 15 * 1000,
+			rotateInterval: 10 * 1000,
 			maxItems: 30
 		}
 	},

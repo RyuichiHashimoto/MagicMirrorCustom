@@ -1,6 +1,4 @@
 *.log
-mounts/
-!mounts/css/custom.css
 run/*compose.y*
 !run/original.compose.yaml
 Gemfile*

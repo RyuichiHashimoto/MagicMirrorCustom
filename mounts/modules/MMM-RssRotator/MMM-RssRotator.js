@@ -4,6 +4,7 @@ Module.register("MMM-RssRotator", {
 		fetchInterval: 5 * 60 * 1000,
 		rotateInterval: 15 * 1000,
 		maxItems: 30,
+		randomize: true,
 		showFeedTitle: true,
 		showPublishedAgo: true,
 		emptyText: "ニュースを取得中..."
@@ -83,9 +84,25 @@ Module.register("MMM-RssRotator", {
 			return;
 		}
 
-		this.items = payload.items;
-		this.activeIndex = 0;
+		this.items = this.config.randomize ? this.shuffleItems(payload.items) : payload.items;
+		this.activeIndex = this.getInitialIndex();
 		this.updateDom(500);
+	},
+
+	shuffleItems(items) {
+		const shuffled = [...items];
+		for (let i = shuffled.length - 1; i > 0; i -= 1) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		return shuffled;
+	},
+
+	getInitialIndex() {
+		if (!this.config.randomize || this.items.length === 0) {
+			return 0;
+		}
+		return Math.floor(Math.random() * this.items.length);
 	},
 
 	formatAgo(date) {
