@@ -20,12 +20,13 @@ const modules = [
 				{ title: "NHK NEWS", url: "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml" },
 				{ title: "ITメディア", url: "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml" },
 				{ title: "Impress Watch", url: "https://www.watch.impress.co.jp/data/rss/1.0/ipw/feed.rdf" },
-				{ title: "JVN", url: "https://jvn.jp/rss/jvn.rdf" },
-				{ title: "TechCrunch AI", url: "https://techcrunch.com/category/artificial-intelligence/feed/" }
+				{ title: "TechCrunch AI", url: "https://techcrunch.com/category/artificial-intelligence/feed/" },
+				{ title: "The Hacker News", url: "http://thehackernews.com/feeds/posts/default" },
+				{ title: "Security NEXT", url: "http://www.security-next.com/feed" }
 			],
 			fetchInterval: 5 * 60 * 1000,
 			rotateInterval: 10 * 1000,
-			maxItems: 30
+			maxItems: 60
 		}
 	},
 	{
