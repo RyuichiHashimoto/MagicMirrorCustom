@@ -6,9 +6,8 @@ After=graphical.target
 User=ryuichi
 Environment=XAUTHORITY=/home/ryuichi/.Xauthority
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:8080
+ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:18089
 Restart=always
 
 [Install]
 WantedBy=graphical.target
-

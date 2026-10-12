@@ -16,7 +16,7 @@ docker compose up -d
 Open the mirror in a browser:
 
 ```text
-http://localhost:8080
+http://localhost:18089
 ```
 
 Stop it with:
@@ -37,7 +37,7 @@ This setup opens Chromium automatically after the desktop session starts and sho
    ```bash
    cd ./run
    docker compose up -d
-   curl -I http://localhost:8080
+   curl -I http://localhost:18089
    ```
 
    `HTTP/1.1 200 OK` means MagicMirror is reachable.
@@ -86,7 +86,7 @@ After=graphical.target
 User=ryuichi
 Environment=XAUTHORITY=/home/ryuichi/.Xauthority
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:8080
+ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:18089
 Restart=always
 
 [Install]
@@ -123,7 +123,7 @@ sudo reboot
 After reboot, the desktop should start, Chromium should open automatically, and MagicMirror should appear fullscreen at:
 
 ```text
-http://localhost:8080
+http://localhost:18089
 ```
 
 ### Useful commands
@@ -171,12 +171,12 @@ If MagicMirror opens but the page is not ready yet, confirm the Docker container
 ```bash
 cd ./run
 docker compose up -d
-curl -I http://localhost:8080
+curl -I http://localhost:18089
 ```
 
 If the browser opens too early after boot, add a short wait before Chromium starts:
 
 ```ini
 ExecStartPre=/bin/sleep 10
-ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:8080
+ExecStart=/usr/bin/chromium-browser --noerrdialogs --disable-infobars --kiosk http://localhost:18089
 ```
