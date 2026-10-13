@@ -33,6 +33,15 @@
 	--calendar-top-gap: 18px; /* 月間カレンダー上の余白。 */
 }
 
+/* 横幅が狭い画面 */
+@media (max-width: 1400px) {
+	:root {
+		--layout-right-width: 30%;
+		--calendar-cell-size: 28px;
+		--calendar-grid-column-gap: 8px;
+	}
+}
+
 /* ===== ベース ===== */
 
 body {
