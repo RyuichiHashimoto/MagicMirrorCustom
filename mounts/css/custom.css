@@ -1,1 +1,134 @@
 /* override css here */
+
+/* ===== 調整用変数 ===== */
+
+:root {
+	--layout-page-margin: 0px; /* 左列の左端余白。 */
+	--layout-right-margin: 0px; /* 右列の右端余白。 */
+	--layout-top-offset: 8px; /* 左右列共通の上端余白。 */
+	--layout-column-gap: 24px; /* 左列と右列の間の余白。 */
+	--layout-right-width: 25%; /* 右列の幅。左列は残り幅を使う。 */
+	--layout-right-max-width: 520px; /* 右列の最大幅。 */
+
+	--module-gap: 14px; /* モジュール間の下余白。 */
+	--module-header-size: 34px; /* モジュール見出しの文字サイズ。 */
+
+	--rss-feed-size: 28px; /* RSSフィード名の文字サイズ。 */
+	--rss-title-size: 32px; /* RSSニュースタイトルの文字サイズ。 */
+	--rss-description-size: 20px; /* RSSニュース詳細の文字サイズ。 */
+	--rss-description-lines: 7; /* RSSニュース詳細の最大行数。 */
+	--rss-meta-size: 20px; /* RSSニュース時刻表示の文字サイズ。 */
+
+	--clock-date-size: 28px; /* 時計の日付文字サイズ。 */
+	--clock-time-size: 64px; /* 時計の時分文字サイズ。 */
+	--clock-seconds-size: 28px; /* 時計の秒文字サイズ。 */
+	--clock-bottom-gap: 20px; /* 時計モジュール下の余白。 */
+
+	--calendar-title-size: 18px; /* 月間カレンダーのタイトル文字サイズ。 */
+	--calendar-weekday-size: 14px; /* 月間カレンダーの曜日文字サイズ。 */
+	--calendar-day-size: 14px; /* 月間カレンダーの日付文字サイズ。 */
+	--calendar-cell-size: 32px; /* 月間カレンダーの日付セルサイズ。 */
+	--calendar-grid-column-gap: 14px; /* 月間カレンダーの列間隔。 */
+	--calendar-grid-row-gap: 15px; /* 月間カレンダーの行間隔。 */
+	--calendar-top-gap: 18px; /* 月間カレンダー上の余白。 */
+}
+
+/* 横幅が狭い画面 */
+@media (max-width: 1400px) {
+	:root {
+		--layout-right-width: 30%;
+		--calendar-cell-size: 28px;
+		--calendar-grid-column-gap: 8px;
+	}
+}
+
+/* ===== ベース ===== */
+
+body {
+	background: #000;
+}
+
+.module {
+	margin-bottom: var(--module-gap);
+}
+
+.module-header {
+	margin-bottom: 12px;
+	border-bottom: 0;
+	color: #f5f5f5;
+	font-size: var(--module-header-size);
+	line-height: 1.25;
+	text-align: inherit;
+	text-transform: none;
+}
+
+/* ===== 2列レイアウト ===== */
+
+.region.top.left {
+	left: var(--layout-page-margin);
+	top: var(--layout-top-offset);
+	width: calc(100% - var(--layout-page-margin) - var(--layout-right-margin) - var(--layout-right-width) - var(--layout-column-gap));
+	text-align: left;
+}
+
+.region.top.right {
+	top: var(--layout-top-offset);
+	right: var(--layout-right-margin);
+	width: var(--layout-right-width);
+	max-width: var(--layout-right-max-width);
+	text-align: left;
+}
+
+.region.top.left .container,
+.region.top.right .container,
+.region.top.right .module {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/* ===== RSSニュース ===== */
+
+.region.top.left,
+.region.top.left .container {
+	text-align: left !important;
+}
+
+.region.top.left .MMM-RssRotator,
+.region.top.left .MMM-RssRotator .module-content {
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: auto;
+	text-align: left !important;
+}
+
+/* ===== 時計 ===== */
+
+.MMM-CustomClock {
+	margin-bottom: var(--clock-bottom-gap);
+}
+
+/* ===== 月間カレンダー ===== */
+
+.MMM-MonthCalendar {
+	margin-top: var(--calendar-top-gap);
+}
+
+.MMM-MonthCalendar .module-header {
+	margin-bottom: 10px;
+}
+
+/* ===== original レイアウト用: 標準 calendar モジュール ===== */
+
+.calendar {
+	color: #f5f5f5;
+	font-size: 28px;
+	line-height: 1.35;
+}
+
+.calendar .today {
+	color: #fff;
+	font-weight: 700;
+}
