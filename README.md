@@ -67,6 +67,18 @@ This setup opens Chromium automatically after the desktop session starts and sho
    ls /home/ryuichi/.Xauthority
    ```
 
+### Raspberry Pi client
+
+When using a Raspberry Pi as the display client, install the color emoji font so
+that the weather icons render correctly in Chromium:
+
+```bash
+sudo apt update
+sudo apt install fonts-noto-color-emoji
+fc-cache -fv
+sudo systemctl restart kiosk.service
+```
+
 ### Service file
 
 The kiosk service is stored here:
