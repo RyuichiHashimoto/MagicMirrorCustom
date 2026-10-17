@@ -61,7 +61,7 @@ Module.register("MMM-OpenMeteoWeather", {
 
 		const title = document.createElement("div");
 		title.className = "openmeteo-day-title";
-		title.textContent = `${this.getRelativeDayLabel(index)} (${this.formatMonthDay(day.date)})`;
+		title.textContent = this.getRelativeDayLabel(index);
 		card.appendChild(title);
 
 		const periods = document.createElement("div");
@@ -132,11 +132,6 @@ Module.register("MMM-OpenMeteoWeather", {
 
 	getRelativeDayLabel(index) {
 		return ["今日", "明日", "明後日"][index] || `${index + 1}日後`;
-	},
-
-	formatMonthDay(dateText) {
-		const [, month, day] = dateText.split("-");
-		return `${Number(month)}/${Number(day)}`;
 	},
 
 	formatUpdatedAt(dateText) {
