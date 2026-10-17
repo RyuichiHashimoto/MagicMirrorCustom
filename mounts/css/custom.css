@@ -32,7 +32,6 @@
 	--calendar-grid-row-gap: 15px; /* 月間カレンダーの行間隔。 */
 	--calendar-top-gap: 18px; /* 月間カレンダー上の余白。 */
 
-	--weather-heading-size: 17px; /* 天気モジュールの地域名。 */
 	--weather-day-title-size: 15px; /* 天気モジュールの日付。 */
 	--weather-icon-size: 32px; /* 天気アイコン。 */
 	--weather-value-size: 15px; /* 気温・降水確率。 */

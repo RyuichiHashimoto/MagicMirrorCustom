@@ -2,7 +2,6 @@ Module.register("MMM-OpenMeteoWeather", {
 	defaults: {
 		latitude: 34.8164,
 		longitude: 135.5686,
-		locationName: "大阪府茨木市",
 		timezone: "Asia/Tokyo",
 		forecastDays: 3,
 		updateInterval: 15 * 60 * 1000,
@@ -23,11 +22,6 @@ Module.register("MMM-OpenMeteoWeather", {
 	getDom() {
 		const wrapper = document.createElement("div");
 		wrapper.className = "mmm-openmeteo-weather";
-
-		const heading = document.createElement("div");
-		heading.className = "openmeteo-heading";
-		heading.textContent = this.config.locationName;
-		wrapper.appendChild(heading);
 
 		if (!this.weather) {
 			const status = document.createElement("div");
