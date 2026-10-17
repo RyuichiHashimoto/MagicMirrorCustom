@@ -1,1 +1,1 @@
-let config = { basePath: "/"};
+globalThis.config = { basePath: "/"};

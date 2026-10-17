@@ -31,6 +31,13 @@
 	--calendar-grid-column-gap: 14px; /* 月間カレンダーの列間隔。 */
 	--calendar-grid-row-gap: 15px; /* 月間カレンダーの行間隔。 */
 	--calendar-top-gap: 18px; /* 月間カレンダー上の余白。 */
+
+	--weather-heading-size: 17px; /* 天気モジュールの地域名。 */
+	--weather-day-title-size: 15px; /* 天気モジュールの日付。 */
+	--weather-period-size: 13px; /* 昼・夜ラベル。 */
+	--weather-icon-size: 32px; /* 天気アイコン。 */
+	--weather-value-size: 15px; /* 気温・降水確率。 */
+	--weather-top-gap: 18px; /* 天気モジュール上の余白。 */
 }
 
 /* 横幅が狭い画面 */
@@ -39,6 +46,8 @@
 		--layout-right-width: 30%;
 		--calendar-cell-size: 28px;
 		--calendar-grid-column-gap: 8px;
+		--weather-icon-size: 28px;
+		--weather-value-size: 14px;
 	}
 }
 
@@ -108,6 +117,16 @@ body {
 
 .MMM-CustomClock {
 	margin-bottom: var(--clock-bottom-gap);
+}
+
+/* ===== 天気 ===== */
+
+.MMM-OpenMeteoWeather {
+	margin-top: var(--weather-top-gap);
+}
+
+.MMM-OpenMeteoWeather .module-header {
+	margin-bottom: 10px;
 }
 
 /* ===== 月間カレンダー ===== */

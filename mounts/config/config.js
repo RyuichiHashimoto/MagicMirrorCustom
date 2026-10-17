@@ -39,13 +39,15 @@ const modules = [
 		}
 	},
 	{
-		module: "MMM-MonthCalendar",
+		module: "MMM-OpenMeteoWeather",
 		position: "top_right",
 		config: {
-			updateInterval: 60 * 60 * 1000,
-			holidayCsvUrl: "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv",
-			holidayCsvRefreshInterval: 24 * 60 * 60 * 1000,
-			additionalHolidays: []
+			latitude: 34.8164,
+			longitude: 135.5686,
+			locationName: "大阪府茨木市",
+			timezone: "Asia/Tokyo",
+			forecastDays: 3,
+			updateInterval: 60 * 60 * 1000
 		}
 	},
 ];

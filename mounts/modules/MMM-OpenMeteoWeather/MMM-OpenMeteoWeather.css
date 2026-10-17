@@ -1,0 +1,112 @@
+.mmm-openmeteo-weather {
+	width: 100%;
+	box-sizing: border-box;
+	color: #f5f5f5;
+}
+
+.openmeteo-heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 10px;
+	color: #f5f5f5;
+	font-size: var(--weather-heading-size, 17px);
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-align: center;
+}
+
+.openmeteo-heading::before,
+.openmeteo-heading::after {
+	content: "";
+	flex: 1;
+	height: 2px;
+	background: #2ee86d;
+}
+
+.openmeteo-forecast {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	border-bottom: 1px solid #666;
+}
+
+.openmeteo-day {
+	min-width: 0;
+	padding: 0 10px 10px;
+	border-left: 1px solid #555;
+}
+
+.openmeteo-day:first-child {
+	padding-left: 0;
+	border-left: 0;
+}
+
+.openmeteo-day:last-child {
+	padding-right: 0;
+}
+
+.openmeteo-day-title {
+	padding-bottom: 7px;
+	border-bottom: 2px solid #2ee86d;
+	font-size: var(--weather-day-title-size, 15px);
+	font-weight: 700;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.openmeteo-periods {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 4px;
+	padding-top: 8px;
+}
+
+.openmeteo-period {
+	min-width: 0;
+	text-align: center;
+}
+
+.openmeteo-period-label {
+	font-size: var(--weather-period-size, 13px);
+	font-weight: 700;
+}
+
+.openmeteo-icon {
+	height: 42px;
+	margin: 3px 0;
+	font-family: "Noto Color Emoji", "Segoe UI Emoji", sans-serif;
+	font-size: var(--weather-icon-size, 32px);
+	font-weight: 400;
+	line-height: 42px;
+}
+
+.openmeteo-temperature,
+.openmeteo-precipitation {
+	font-size: var(--weather-value-size, 15px);
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.openmeteo-temperature.is-night,
+.openmeteo-precipitation {
+	color: #59b8ff;
+}
+
+.openmeteo-footer {
+	margin-top: 5px;
+	color: #777;
+	font-size: 10px;
+	text-align: right;
+}
+
+.openmeteo-status {
+	padding: 30px 0;
+	color: #999;
+	font-size: 16px;
+	text-align: center;
+}
+
+.openmeteo-status.is-error {
+	color: #ff7777;
+}
