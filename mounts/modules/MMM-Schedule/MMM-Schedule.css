@@ -77,3 +77,45 @@
 		grid-template-columns: 120px minmax(0, 1fr);
 	}
 }
+
+/* Keep the complete right column inside short 1024x600-class displays. */
+@media (max-height: 700px) {
+	.mmm-schedule {
+		font-size: 16px;
+	}
+
+	.mmm-schedule .schedule-title {
+		gap: 12px;
+		margin-bottom: 12px;
+		font-size: 20px;
+	}
+
+	.mmm-schedule .schedule-title-rule {
+		height: 2px;
+	}
+
+	.mmm-schedule .schedule-section {
+		min-height: 42px;
+	}
+
+	.mmm-schedule .schedule-section-heading {
+		margin-bottom: 6px;
+		padding-left: 8px;
+		border-left-width: 3px;
+		font-size: 16px;
+	}
+
+	.mmm-schedule .schedule-event {
+		grid-template-columns: 92px minmax(0, 1fr);
+		gap: 10px;
+		margin-bottom: 6px;
+	}
+
+	.mmm-schedule .schedule-more {
+		font-size: 15px;
+	}
+
+	.mmm-schedule .schedule-divider {
+		margin: 12px 0 10px;
+	}
+}

@@ -52,7 +52,7 @@ const modules = [
 	},
 	{
 		module: "MMM-Schedule",
-		position: "bottom_right",
+		position: "top_right",
 		config: {
 			locale: "ja-JP",
 			timeZone: "Asia/Tokyo",
