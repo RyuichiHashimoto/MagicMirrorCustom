@@ -6,6 +6,24 @@ You find the [documentation here](https://khassel.gitlab.io/magicmirror/).
 
 ## Local Docker startup
 
+### Required environment variables
+
+Before using this project for the first time, copy the environment file:
+
+```bash
+cd ./run
+cp .env.example .env
+```
+
+Edit `run/.env` and replace the sample values for these settings:
+
+- `GOOGLE_CALENDAR_ICAL_URL`: Google Calendar's **Secret address in iCal format**
+- `WEATHER_LATITUDE`: latitude used for the weather forecast
+- `WEATHER_LONGITUDE`: longitude used for the weather forecast
+
+The weather location requires both `WEATHER_LATITUDE` and
+`WEATHER_LONGITUDE`. Preserve an existing `run/.env` instead of copying over it.
+
 Start MagicMirror in server mode with Docker Compose:
 
 ```bash
@@ -27,9 +45,6 @@ helper. Install its dependency once, then configure the secret URL:
 ```bash
 cd mounts/modules/MMM-Schedule
 npm install --omit=dev
-cd ../../../run
-# For a new setup only; preserve an existing run/.env file.
-cp .env.example .env
 ```
 
 Edit `run/.env` and set `GOOGLE_CALENDAR_ICAL_URL` to the calendar's **Secret

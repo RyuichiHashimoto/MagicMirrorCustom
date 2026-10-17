@@ -46,6 +46,10 @@
 	font-size: 21px;
 }
 
+.mmm-schedule .schedule-empty {
+	color: var(--schedule-muted);
+}
+
 .mmm-schedule .schedule-divider {
 	height: 1px;
 	margin: 24px 0 22px;

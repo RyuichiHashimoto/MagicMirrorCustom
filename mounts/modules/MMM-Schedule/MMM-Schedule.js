@@ -91,6 +91,13 @@ Module.register("MMM-Schedule", {
 		section.appendChild(heading);
 
 		const visibleEvents = events.slice(0, this.config.maxItemsPerSection);
+		if (visibleEvents.length === 0) {
+			const empty = document.createElement("div");
+			empty.className = "schedule-empty";
+			empty.textContent = "（なし）";
+			section.appendChild(empty);
+		}
+
 		visibleEvents.forEach((event) => {
 			const row = document.createElement("div");
 			row.className = "schedule-event";
