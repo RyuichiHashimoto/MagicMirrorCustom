@@ -10,22 +10,6 @@
 	text-align: left;
 }
 
-.mmm-schedule .schedule-title {
-	display: flex;
-	align-items: center;
-	gap: 24px;
-	margin-bottom: 30px;
-	font-size: 31px;
-	font-weight: 700;
-	letter-spacing: 0.12em;
-}
-
-.mmm-schedule .schedule-title-rule {
-	flex: 1;
-	height: 3px;
-	background: var(--schedule-accent);
-}
-
 .mmm-schedule .schedule-section {
 	min-height: 82px;
 }
@@ -82,16 +66,6 @@
 @media (max-height: 700px) {
 	.mmm-schedule {
 		font-size: 16px;
-	}
-
-	.mmm-schedule .schedule-title {
-		gap: 12px;
-		margin-bottom: 12px;
-		font-size: 20px;
-	}
-
-	.mmm-schedule .schedule-title-rule {
-		height: 2px;
 	}
 
 	.mmm-schedule .schedule-section {

@@ -43,15 +43,6 @@ Module.register("MMM-Schedule", {
 		const wrapper = document.createElement("div");
 		wrapper.className = "mmm-schedule";
 
-		const title = document.createElement("div");
-		title.className = "schedule-title";
-		title.appendChild(document.createTextNode("SCHEDULE"));
-
-		const titleRule = document.createElement("span");
-		titleRule.className = "schedule-title-rule";
-		title.appendChild(titleRule);
-		wrapper.appendChild(title);
-
 		const grouped = this.groupEvents(new Date());
 		wrapper.appendChild(this.buildSection("NEXT", grouped.next, true));
 
