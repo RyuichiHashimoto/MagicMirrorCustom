@@ -34,7 +34,6 @@
 
 	--weather-heading-size: 17px; /* 天気モジュールの地域名。 */
 	--weather-day-title-size: 15px; /* 天気モジュールの日付。 */
-	--weather-period-size: 13px; /* 昼・夜ラベル。 */
 	--weather-icon-size: 32px; /* 天気アイコン。 */
 	--weather-value-size: 15px; /* 気温・降水確率。 */
 	--weather-top-gap: 18px; /* 天気モジュール上の余白。 */

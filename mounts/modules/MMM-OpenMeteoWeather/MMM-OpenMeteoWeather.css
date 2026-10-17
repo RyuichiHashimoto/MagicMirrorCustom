@@ -47,7 +47,7 @@
 }
 
 .openmeteo-day-title {
-	padding-bottom: 7px;
+	padding-bottom: 2px;
 	font-size: var(--weather-day-title-size, 15px);
 	font-weight: 700;
 	text-align: center;
@@ -58,7 +58,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 4px;
-	padding-top: 8px;
+	padding-top: 0;
 }
 
 .openmeteo-period {
@@ -66,14 +66,9 @@
 	text-align: center;
 }
 
-.openmeteo-period-label {
-	font-size: var(--weather-period-size, 13px);
-	font-weight: 700;
-}
-
 .openmeteo-icon {
 	height: 42px;
-	margin: 3px 0;
+	margin: 0 0 3px;
 	font-family: "Noto Color Emoji", "Segoe UI Emoji", sans-serif;
 	font-size: var(--weather-icon-size, 32px);
 	font-weight: 400;

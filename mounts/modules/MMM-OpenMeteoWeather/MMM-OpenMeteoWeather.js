@@ -66,21 +66,16 @@ Module.register("MMM-OpenMeteoWeather", {
 
 		const periods = document.createElement("div");
 		periods.className = "openmeteo-periods";
-		periods.appendChild(this.createPeriod("昼", day.daytime, false));
-		periods.appendChild(this.createPeriod("夜", day.nighttime, true));
+		periods.appendChild(this.createPeriod(day.daytime, false));
+		periods.appendChild(this.createPeriod(day.nighttime, true));
 		card.appendChild(periods);
 
 		return card;
 	},
 
-	createPeriod(label, period, isNight) {
+	createPeriod(period, isNight) {
 		const element = document.createElement("div");
 		element.className = "openmeteo-period";
-
-		const periodLabel = document.createElement("div");
-		periodLabel.className = "openmeteo-period-label";
-		periodLabel.textContent = label;
-		element.appendChild(periodLabel);
 
 		const icon = document.createElement("div");
 		icon.className = "openmeteo-icon";
