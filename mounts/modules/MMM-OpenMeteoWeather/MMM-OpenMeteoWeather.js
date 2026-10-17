@@ -1,7 +1,5 @@
 Module.register("MMM-OpenMeteoWeather", {
 	defaults: {
-		latitude: 34.8164,
-		longitude: 135.5686,
 		timezone: "Asia/Tokyo",
 		forecastDays: 3,
 		updateInterval: 15 * 60 * 1000,
@@ -96,8 +94,6 @@ Module.register("MMM-OpenMeteoWeather", {
 	requestWeather() {
 		this.sendSocketNotification("OPENMETEO_FETCH", {
 			identifier: this.identifier,
-			latitude: this.config.latitude,
-			longitude: this.config.longitude,
 			timezone: this.config.timezone,
 			forecastDays: this.config.forecastDays
 		});

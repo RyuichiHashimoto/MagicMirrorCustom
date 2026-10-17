@@ -37,6 +37,13 @@ address in iCal format**, then restart MagicMirror. The URL is passed only to th
 MagicMirror server process and is never included in browser configuration or
 socket notifications. `run/.env` and other `.env` files are ignored by Git.
 
+### Weather location
+
+`MMM-OpenMeteoWeather` reads its forecast coordinates on the server side. Set
+`WEATHER_LATITUDE` and `WEATHER_LONGITUDE` in `run/.env`, then restart
+MagicMirror. The coordinates are not included in browser configuration or
+socket notifications.
+
 Stop it with:
 
 ```bash

@@ -33,6 +33,8 @@ services:
       - MM_MODULES_DIR
       - MM_CUSTOMCSS_FILE
       - GOOGLE_CALENDAR_ICAL_URL
+      - WEATHER_LATITUDE
+      - WEATHER_LONGITUDE
     ports:
       - ${MM_SERVER_PORTS}
   # electron
@@ -48,6 +50,8 @@ services:
       - MM_MODULES_DIR
       - MM_CUSTOMCSS_FILE
       - GOOGLE_CALENDAR_ICAL_URL
+      - WEATHER_LATITUDE
+      - WEATHER_LONGITUDE
     extends:
       service: gui
     network_mode: host

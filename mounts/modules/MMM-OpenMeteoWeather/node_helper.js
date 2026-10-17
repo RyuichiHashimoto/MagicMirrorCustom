@@ -23,8 +23,8 @@ module.exports = NodeHelper.create({
 	},
 
 	async fetchWeather(payload) {
-		const latitude = this.toCoordinate(payload.latitude, -90, 90, "latitude");
-		const longitude = this.toCoordinate(payload.longitude, -180, 180, "longitude");
+		const latitude = this.toCoordinate(process.env.WEATHER_LATITUDE, -90, 90, "WEATHER_LATITUDE");
+		const longitude = this.toCoordinate(process.env.WEATHER_LONGITUDE, -180, 180, "WEATHER_LONGITUDE");
 		const forecastDays = Math.min(7, Math.max(1, Number(payload.forecastDays) || 3));
 		const timezone = typeof payload.timezone === "string" ? payload.timezone : "Asia/Tokyo";
 		const url = new URL("https://api.open-meteo.com/v1/forecast");

@@ -42,8 +42,6 @@ const modules = [
 		module: "MMM-OpenMeteoWeather",
 		position: "top_right",
 		config: {
-			latitude: 34.8164,
-			longitude: 135.5686,
 			timezone: "Asia/Tokyo",
 			forecastDays: 3,
 			updateInterval: 60 * 60 * 1000
