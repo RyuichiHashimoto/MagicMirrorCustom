@@ -91,3 +91,10 @@
 	font-size: var(--rss-title-size, 56px);
 	line-height: 1.3;
 }
+
+@media (max-width: 1400px) {
+	.mmm-rss-rotator {
+		/* 狭い画面では右側の空きを減らし、記事の表示幅を確保する。 */
+		--rss-content-width: 96%;
+	}
+}
