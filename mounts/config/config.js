@@ -50,6 +50,17 @@ const modules = [
 			updateInterval: 60 * 60 * 1000
 		}
 	},
+	{
+		module: "MMM-Schedule",
+		position: "bottom_right",
+		config: {
+			locale: "ja-JP",
+			timeZone: "Asia/Tokyo",
+			updateInterval: 15 * 60 * 1000,
+			futureDays: 365,
+			maxItemsPerSection: 3
+		}
+	},
 ];
 
 let config = {

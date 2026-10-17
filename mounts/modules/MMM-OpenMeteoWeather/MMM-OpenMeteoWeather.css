@@ -92,6 +92,10 @@
 }
 
 .openmeteo-precipitation {
+	color: #f5f5f5;
+}
+
+.openmeteo-precipitation.is-high {
 	color: #59b8ff;
 }
 

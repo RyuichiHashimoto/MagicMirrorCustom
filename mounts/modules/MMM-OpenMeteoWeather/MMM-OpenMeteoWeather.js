@@ -95,8 +95,9 @@ Module.register("MMM-OpenMeteoWeather", {
 		element.appendChild(temperature);
 
 		const precipitation = document.createElement("div");
-		precipitation.className = "openmeteo-precipitation";
-		precipitation.textContent = `${Math.round(period.precipitationProbability)}%`;
+		const precipitationProbability = Math.round(period.precipitationProbability);
+		precipitation.className = `openmeteo-precipitation${precipitationProbability >= 40 ? " is-high" : ""}`;
+		precipitation.textContent = `${precipitationProbability}%`;
 		precipitation.title = "降水確率";
 		element.appendChild(precipitation);
 

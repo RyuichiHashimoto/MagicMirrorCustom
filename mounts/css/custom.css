@@ -82,6 +82,10 @@ body {
 
 .region.top.right {
 	top: var(--layout-top-offset);
+}
+
+.region.top.right,
+.region.bottom.right {
 	right: var(--layout-right-margin);
 	width: var(--layout-right-width);
 	max-width: var(--layout-right-max-width);
@@ -90,7 +94,9 @@ body {
 
 .region.top.left .container,
 .region.top.right .container,
-.region.top.right .module {
+.region.top.right .module,
+.region.bottom.right .container,
+.region.bottom.right .module {
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;

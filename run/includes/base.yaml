@@ -32,6 +32,7 @@ services:
       - MM_SCENARIO
       - MM_MODULES_DIR
       - MM_CUSTOMCSS_FILE
+      - GOOGLE_CALENDAR_ICAL_URL
     ports:
       - ${MM_SERVER_PORTS}
   # electron
@@ -46,6 +47,7 @@ services:
       - MM_SCENARIO
       - MM_MODULES_DIR
       - MM_CUSTOMCSS_FILE
+      - GOOGLE_CALENDAR_ICAL_URL
     extends:
       service: gui
     network_mode: host

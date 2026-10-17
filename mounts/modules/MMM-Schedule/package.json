@@ -1,0 +1,10 @@
+{
+	"name": "mmm-schedule",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Google Calendar schedule module for MagicMirror",
+	"license": "MIT",
+	"dependencies": {
+		"node-ical": "0.27.3"
+	}
+}

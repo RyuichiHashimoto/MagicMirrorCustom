@@ -19,6 +19,24 @@ Open the mirror in a browser:
 http://localhost:18089
 ```
 
+### Google Calendar schedule
+
+`MMM-Schedule` reads a Google Calendar private iCal feed only in its server-side
+helper. Install its dependency once, then configure the secret URL:
+
+```bash
+cd mounts/modules/MMM-Schedule
+npm install --omit=dev
+cd ../../../run
+# For a new setup only; preserve an existing run/.env file.
+cp .env.example .env
+```
+
+Edit `run/.env` and set `GOOGLE_CALENDAR_ICAL_URL` to the calendar's **Secret
+address in iCal format**, then restart MagicMirror. The URL is passed only to the
+MagicMirror server process and is never included in browser configuration or
+socket notifications. `run/.env` and other `.env` files are ignored by Git.
+
 Stop it with:
 
 ```bash
